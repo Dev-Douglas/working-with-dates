@@ -62,9 +62,9 @@
     setInterval(update, msSeconds)
 
     const handle = () => {
-        const date = input.value.split('-')
+        const [year, month, day] = input.value.split('-')
 
-        dateNow.textContent = `${date[2]}/${date[1]}/${date[0]}`
+        dateNow.textContent = `${day}/${month}/${year}`
         main.appendChild(h2)
     }
     input.addEventListener('input', handle)
